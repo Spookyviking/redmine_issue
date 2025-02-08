@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  redmine_issue_bot:
+    build: .
+    container_name: redmine_issue_bot
+    env_file:
+      - .env  # Указываем файл с переменными окружения
+    restart: unless-stopped
